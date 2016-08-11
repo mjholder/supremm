@@ -2,6 +2,17 @@
 
 ## [Unreleased]
 
+### Added
+
+- Option to output summarize_jobs.py to file as it runs and valid json file when it finishes.
+
+### Changed
+
+- puffypcp reimplements much of the static functions from summarize.py which interfaced with
+  the PCP libraries. Runs significantly faster.
+- Removes pcpfast in favor of implementing direct access to pcp within puffypcp.
+
+
 ## [1.0.1] - 2016-08-05
 
 ### Added
@@ -32,6 +43,7 @@
   to 150. This mitigates an issue where jobs with a huge number of processes
   would result in a summary document that exceeds the mongoDB maximum document
   size.
+
 
 ## [1.0.0] - 2016-05-23
 
