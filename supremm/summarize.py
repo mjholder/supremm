@@ -141,7 +141,6 @@ class Summarize(object):
             logging.warning("%s %s missing indom @ %s", mdata.nodename, analytic.name, float(result.contents.timestamp))
             self.logerror(mdata.nodename, analytic.name, "missing indom")
             return True # Skip this timestep
->>>>>>> iandesja
 
         try:
             retval = analytic.process(mdata, float(result.contents.timestamp), data, description)
