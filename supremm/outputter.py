@@ -129,13 +129,16 @@ class MongoOutput(object):
             self._client.close()
             self._client = None
 
-
-class StdoutOutput(object):
+class StdoutOutput(FileOutput):
     """
     Simple outputter that dumps the job summary to stdout. Intended for debug purposes.
     """
+
+    # Deliberately didn't call superclass constructor so it wouldn't throw exception to sys.stdout not being a filepath that exists
     def __init__(self, _, resconf):
         self._resid = resconf['resource_id']
+        self._file = sys.stdout
+        self._dojson = False
 
     def __enter__(self):
         return self

@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 
+<<<<<<< HEAD
 
 ## [1.0.2] - 2017-01-26
 
@@ -33,6 +34,20 @@
 - Allow the output configuration parameter `type` as a synonym for `db_engine`.
 
 ## [1.0.1] - 2016-08-16
+=======
+### Added
+
+- Option to output summarize_jobs.py to file as it runs and valid json file when it finishes.
+
+### Changed
+
+- puffypcp reimplements much of the static functions from summarize.py which interfaced with
+  the PCP libraries. Runs significantly faster.
+- Removes pcpfast in favor of implementing direct access to pcp within puffypcp.
+
+
+## [1.0.1] - 2016-08-05
+>>>>>>> 78d29d0884d3649d5d40c19ea6d5d8a5f2a93383
 
 ### Added
 
@@ -63,6 +78,7 @@
   to 150. This mitigates an issue where jobs with a huge number of processes
   would result in a summary document that exceeds the MongoDB maximum document
   size.
+
 
 ## [1.0.0] - 2016-05-23
 
